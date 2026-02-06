@@ -32,7 +32,7 @@ export default function SignupForm() {
   };
 
   return (
-    <section className="bg-blue-600 py-16 text-white">
+    <section className="bg-[#CB0B19] py-16 text-white newzletter">
       <div className="container mx-auto px-4 max-w-lg">
         <h2 className="text-3xl font-bold mb-4 text-center">Join Our Newsletter</h2>
         <p className="mb-8 text-center">Subscribe to stay updated with the latest news</p>
@@ -44,13 +44,13 @@ export default function SignupForm() {
           </div>
         )}
 
-        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex gap-4">
           <div>
             <input
               type="text"
               placeholder="Your Name"
               {...register("name", { required: "Name is required" })}
-              className={`w-full px-4 py-2 rounded text-black ${
+              className={`w-full px-4 py-2 rounded text-black bg-white ${
                 errors.name ? "border-2 border-red-500" : ""
               }`}
             />
@@ -68,7 +68,7 @@ export default function SignupForm() {
                   message: "Invalid email address",
                 },
               })}
-              className={`w-full px-4 py-2 rounded text-black ${
+              className={`w-full px-4 py-2 rounded text-black bg-white ${
                 errors.email ? "border-2 border-red-500" : ""
               }`}
             />
@@ -78,7 +78,7 @@ export default function SignupForm() {
           <button
             type="submit"
             disabled={loading}
-            className="bg-white text-blue-600 font-semibold px-6 py-2 rounded hover:bg-gray-200 transition flex justify-center items-center"
+            className="bg-white text-gray-600 font-semibold px-6 py-2 rounded hover:bg-gray-200 transition flex justify-center items-center"
           >
             {loading ? (
               <svg

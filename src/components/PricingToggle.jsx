@@ -2,9 +2,9 @@ import React, { useState, useRef, useEffect } from "react";
 import gsap from "gsap";
 
 const plans = [
-  { name: "Basic", monthly: 10, yearly: 100 },
-  { name: "Pro", monthly: 20, yearly: 200 },
-  { name: "Enterprise", monthly: 30, yearly: 300 },
+  { name: "Science", monthly: 10, yearly: 100 },
+  { name: "Commerce", monthly: 20, yearly: 200 },
+  { name: "Arts", monthly: 30, yearly: 300 },
 ];
 
 export default function PricingToggle() {
@@ -33,9 +33,10 @@ export default function PricingToggle() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-6 bg-white rounded shadow-md text-center">
+    <section className="max-w-4xl mx-auto p-6  text-center mt-4">
+      <h3 className="text-[40px] font-semibold mb-8">Cource Fees</h3>
       {/* Toggle */}
-      <div className="flex justify-center items-center mb-6 gap-4">
+      <div className="flex justify-center items-center mb-6 gap-4 pt-4">
         <span className={billing === "monthly" ? "font-bold" : ""}>Monthly</span>
         <label className="relative inline-flex items-center cursor-pointer">
           <input
@@ -45,7 +46,7 @@ export default function PricingToggle() {
             onChange={handleToggle}
           />
           <div className="w-14 h-8 bg-gray-300 rounded-full peer peer-checked:bg-blue-600 transition-all"></div>
-          <div className="absolute left-1 top-1 w-6 h-6 bg-white rounded-full shadow-md peer-checked:translate-x-6 transition-transform"></div>
+          <div className={`absolute  ${billing === "monthly" ? "left-1" : "right-1"}  top-1 w-6 h-6 bg-white rounded-full shadow-md peer-checked:translate-x-6 transition-transform`}></div>
         </label>
         <span className={billing === "yearly" ? "font-bold" : ""}>Yearly</span>
       </div>
@@ -71,6 +72,6 @@ export default function PricingToggle() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

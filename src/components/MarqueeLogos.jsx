@@ -28,7 +28,8 @@ function MarqueeLogos() {
   }, []);
 
   return (
-    <div className="overflow-hidden bg-gray-100 py-6">
+    <div className="overflow-hidden py-8">
+      <h2 className="text-black text-[30px] font-light text-center mb-8">Affiliations</h2>
       <div
         ref={marqueeRef}
         className="flex w-[200%] space-x-8"
@@ -38,7 +39,7 @@ function MarqueeLogos() {
             key={index}
             src={logo}
             alt={`Logo ${index + 1}`}
-            className="h-16 object-contain"
+            className="h-10 object-contain"
           />
         ))}
         {/* Duplicate logos for infinite scroll */}
@@ -47,7 +48,7 @@ function MarqueeLogos() {
             key={`dup-${index}`}
             src={logo}
             alt={`Logo ${index + 1}`}
-            className="h-16 object-contain"
+            className="h-10 object-contain"
           />
         ))}
       </div>

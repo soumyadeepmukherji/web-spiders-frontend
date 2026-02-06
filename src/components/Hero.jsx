@@ -4,13 +4,13 @@ import { FaUniversity, FaUser, FaUsers, FaBook } from "react-icons/fa";
 function Hero() {
   return (
     <section
-      className="relative w-full h-screen bg-cover bg-center"
+      className="relative w-full h-screen bg-cover bg-center herobanner"
       style={{
         backgroundImage: `url('./src/assets/herobanner.png')`,
       }}
     >
-      {/* Transparent overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/30"></div>
+
+      <div className="absolute inset-0 bg-black/30 h-100% bg-linear-to-b from-black/20 to-transparent"></div>
 
       {/* Content */}
       <div className="relative z-10 flex flex-col justify-center items-center h-full text-center px-4">
@@ -22,10 +22,10 @@ function Hero() {
         </p>
 
         <div className="flex flex-col md:flex-row gap-4">
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded transition">
+          <button className="bg-[#CB0B19] border-1 border-transparent text-white px-3 py-1 rounded hover:bg-transparent hover:border-[#fff] transition px-6 py-3 rounded transition">
             Explore Admissions
           </button>
-          <button className="bg-yellow-400 hover:bg-yellow-500 text-black px-6 py-3 rounded transition">
+          <button className="bg-transparent border-1 border-[#fff] text-white px-3 py-1 rounded hover:bg-[#000] hover:border-transparent transition px-6 py-3 rounded transition">
             Enquire Now
           </button>
         </div>
@@ -33,29 +33,29 @@ function Hero() {
 
 
       {/* Bottom feature list */}
-        <div className="absolute bottom-8 left-0 right-0 flex flex-col md:flex-row justify-center items-center gap-8 px-4">
+        <div className="absolute bottom-8 left-0 right-0 flex flex-col md:flex-row justify-center items-center gap-8 px-4 feature-list">
           {/* Feature 1 */}
-          <div className="flex flex-col items-center text-white">
-            <FaUniversity size={36} className="mb-2" />
-            <span className="font-semibold">Daly College of Business Management</span>
+          <div className="flex flex items-center text-white">
+            <FaUniversity size={16} className="mb-0" />
+            <span className="font-400">Daly College of Business Management</span>
           </div>
 
           {/* Feature 2 */}
-          <div className="flex flex-col items-center text-white">
-            <FaUser size={36} className="mb-2" />
-            <span className="font-semibold">Parent's Login</span>
+          <div className="flex flex items-center text-white">
+            <FaUser size={16} className="mb-0" />
+            <span className="font-400">Parent's Login</span>
           </div>
 
           {/* Feature 3 */}
-          <div className="flex flex-col items-center text-white">
-            <FaUsers size={36} className="mb-2" />
-            <span className="font-semibold">Old Dalian Association</span>
+          <div className="flex flex items-center text-white">
+            <FaUsers size={16} className="mb-0" />
+            <span className="font-400">Old Dalian Association</span>
           </div>
 
           {/* Feature 4 */}
-          <div className="flex flex-col items-center text-white">
-            <FaBook size={36} className="mb-2" />
-            <span className="font-semibold">The Daly Prophet</span>
+          <div className="flex flex items-center text-white">
+            <FaBook size={16} className="mb-0" />
+            <span className="font-400">The Daly Prophet</span>
           </div>
         </div>
     </section>

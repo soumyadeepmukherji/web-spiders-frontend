@@ -1,0 +1,94 @@
+/* Custom Style */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --font: "Inter", sans-serif;
+    --primary-color: #CB0B19;
+    --secondary-color: #000000;
+}
+
+body{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--font);
+    line-height: 26px;
+    color: var(--secondary-color);
+}
+
+.main-header{
+    color: #fff;
+}
+.main-header.sticky{
+    color: var(--secondary-color);
+}
+
+.main-header.sticky button:hover{
+    color: #000000;
+    border-color: #000000;
+}
+
+.logo{
+    height: 60px;
+}
+.herobanner p{
+    font-size: 20px;
+}
+.herobanner::after, .herobanner::before {
+    content: '';
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.herobanner::after{
+    top: 0;
+    background: linear-gradient( #000 0, transparent 70%);
+}
+.herobanner::before {
+    bottom: 0;
+    background: linear-gradient(transparent 0, #000000ed 100%);
+}
+.feature-list .flex{
+    gap: 10px;
+    position: relative;
+    padding: 10px;
+}
+.feature-list .flex span{
+    font-size: 14px;
+    line-height: 20px;
+}
+.feature-list .flex:not(:last-child):before{
+    content: '';
+    position: absolute;
+    right: -15px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    height: 100%;
+    background: #fff;
+}
+.campus .container {
+    margin: 0 auto;
+    max-width: 1300px;
+}
+.rotet-text{
+    transform: rotate(-90deg);
+    width: 100%;
+    height: 100%;
+    left: 0;
+}
+.blurcard:hover .rotet-text{
+    display: none;
+}
+
+.newzletter .container{
+    max-width: 1200px;
+}
+.newzletter .flex{
+    justify-content: center;
+}
+footer ul li{
+    color: #A1A6AC;
+    font-size: 14px;
+}

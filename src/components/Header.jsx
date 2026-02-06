@@ -7,6 +7,7 @@ import gsap from 'gsap';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
   const menuRef = useRef(null);
 
   // animation for menu
@@ -29,41 +30,59 @@ function Header() {
         }
     }, [isOpen]);
 
+    useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
-      <div className="container mx-auto flex items-center justify-between p-4">
+    <header
+      className={`w-full top-0 left-0 transition-all duration-300 main-header ${
+        isSticky
+          ? "sticky shadow-md bg-white z-50"
+          : "absolute bg-transparent z-30"
+      }`}
+    >
+      <div className="container mx-auto flex items-center justify-between p-0">
         {/* Logo */}
-        <div className="flex items-center">
+        <div className="flex items-center logo">
           <img
             src="/src/assets/logo.png"
             alt="Web Spiders Logo"
-            className="h-10 w-auto"
+            className=" w-auto"
           />
         </div>
 
-        {/* Contact + ERP + Hamburger */}
-        <div className="flex items-center space-x-4">
+        {/* Contact details */}
+        <div className="flex items-center space-x-4 px-4">
           {/* Email */}
-          <div className="flex items-center space-x-1 text-gray-700">
+          <div className="flex items-center space-x-1 text-white-500 hover:text-[#CB0B19] transition-all duration-300">
             <MdEmail size={20} />
             <span className="hidden md:inline">contact@dalycollege.org</span>
           </div>
 
           {/* Phone */}
-          <div className="flex items-center space-x-1 text-gray-700">
+          <div className="flex items-center space-x-1 text-white-500 hover:text-[#CB0B19] transition-all duration-300">
             <MdPhone size={20} />
             <span className="hidden md:inline">91 (0731) 2719000</span>
           </div>
 
           {/* ERP Login */}
-          <button className="flex items-center bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 transition">
+          <button className="flex items-center bg-[#CB0B19] border-1 border-transparent text-white px-3 py-1 rounded hover:bg-transparent hover:border-[#fff] transition">
             <FiLogIn className="mr-1" />
             ERP Login
           </button>
 
           {/* Hamburger */}
           <button
-            className="block text-gray-700"
+            className="block text-white-700"
             onClick={() => setIsOpen(!isOpen)}
           >
             <HiMenu size={28} />
@@ -78,10 +97,10 @@ function Header() {
         style={{ height: 0, opacity: 0 }}
       >
         <nav className="flex flex-col space-y-2 p-4">
-          <Link to="/" className="hover:text-blue-600">Home</Link>
-          <Link to="/about" className="hover:text-blue-600">About</Link>
-          <Link to="/testimonial" className="hover:text-blue-600">Testimonial</Link>
-          <Link to="/contact" className="hover:text-blue-600">Contact</Link>
+          <Link to="/" className="text-black hover:text-blue-600">Home</Link>
+          <Link to="/about" className="text-black hover:text-blue-600">About</Link>
+          <Link to="/testimonial" className="text-black hover:text-blue-600">Testimonial</Link>
+          <Link to="/contact" className="text-black hover:text-blue-600">Contact</Link>
         </nav>
       </div>
     </header>
