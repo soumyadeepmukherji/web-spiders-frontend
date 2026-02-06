@@ -35,7 +35,7 @@ function Header() {
         {/* Logo */}
         <div className="flex items-center">
           <img
-            src="/assets/logo.png"
+            src="/src/assets/logo.png"
             alt="Web Spiders Logo"
             className="h-10 w-auto"
           />
