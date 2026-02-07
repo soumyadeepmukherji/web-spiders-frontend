@@ -68,5 +68,10 @@ It showcases real-world frontend features such as hover-based card expansion, st
 ```bash
 git clone https://github.com/soumyadeepmukherji/web-spiders-frontend
 
+npm install
+
+npm run dev
+
+
 2. Live Link
 https://web-spiders-frontend.vercel.app/
