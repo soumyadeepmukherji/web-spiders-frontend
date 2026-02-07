@@ -92,3 +92,51 @@ footer ul li{
     color: #A1A6AC;
     font-size: 14px;
 }
+
+@media (max-width: 768px) {
+.feature-list {
+        /* position: relative; */
+        color: #000;
+        z-index: 9;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        bottom: 7px;
+    }
+    .campus{
+        padding-inline: 20px;
+    }
+    .campus .container{
+        max-width: 100%;
+    }
+    .campus .flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .campus .flex > div {
+        width: 100% !important;
+        height: 200px;
+    }
+    .campus .flex .backdrop-blur-md {
+        opacity: 1 !important;
+        bottom: 0px;
+        transform: translate(0px, 0px) !important;
+    }
+    .campus .flex .rotet-text{
+        display: none;
+    }
+    .gallerySection .buttonlist{
+        padding-inline: 10px;
+    }
+    .gallerySection .buttonlist button{
+        font-size: 14px;
+    }
+    .newzletter .flex{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    footer{
+        padding: 30px 10px 10px;    
+    }
+}

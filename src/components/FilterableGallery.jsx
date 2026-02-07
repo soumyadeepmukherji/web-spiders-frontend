@@ -36,11 +36,11 @@ export default function FilterableGallery() {
   const filteredData = galleryData.filter((item) => item.type === activeTab);
 
   return (
-    <section className="py-16 ">
+    <section className="py-16 gallerySection">
       <h4 className="text-[40px] font-semibold text-center mb-4">Moments @ Daly</h4>
       <p className="text-[18px] font-500 text-center mb-8">Explore events, achievements, and everyday moments that define us.</p>
       {/* Tabs */}
-      <div className="flex justify-center mb-8 gap-6">
+      <div className="flex justify-center mb-8 gap-6 buttonlist">
         {tabs.map((tab) => (
           <button
             key={tab.value}

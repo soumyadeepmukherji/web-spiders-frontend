@@ -77,7 +77,7 @@ function Header() {
           {/* ERP Login */}
           <button className="flex items-center bg-[#CB0B19] border-1 border-transparent text-white px-3 py-1 rounded hover:bg-transparent hover:border-[#fff] transition">
             <FiLogIn className="mr-1" />
-            ERP Login
+            <span className="hidden md:inline">ERP Login</span>
           </button>
 
           {/* Hamburger */}
