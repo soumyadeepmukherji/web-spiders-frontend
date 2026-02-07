@@ -66,7 +66,7 @@ It showcases real-world frontend features such as hover-based card expansion, st
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/soumyadeepmukherji/web-spiders-frontend
+git clone https://github.com/soumyadeepmukherji/web-spiders-frontend.git
 
 npm install
 
