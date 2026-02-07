@@ -1,16 +1,72 @@
-# React + Vite
+# 🚀 React Interactive UI Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Overview
+This project is a modern **React.js frontend application** focused on creating **interactive, animated, and responsive UI components**.  
+It showcases real-world frontend features such as hover-based card expansion, sticky headers on scroll, reusable components, and clean UI design.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
+- Built with **React.js** (Vite)
+- Styled using **Tailwind CSS**
+- Mobile responsive layout
+- Modular & reusable components
+- Interactive UI elements:
+  - Horizontally expandable cards
+  - One card expanded by default
+  - Glassmorphism image overlays
+- Smart sticky header:
+  - Absolute initially
+  - Becomes sticky after scrolling **100px**
+- Smooth transitions and animations
+- State management using React Hooks
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
+- **Frontend:** React.js
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS
+- **State Management:** React Hooks
+- **Icons:** React Icons
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+---
+
+## 🧩 Core Components
+
+### 🔹 Sticky Header
+- Positioned **absolute** on initial load
+- Switches to **sticky** after scrolling 100px
+- Implemented using `useEffect` and scroll event listener
+
+---
+
+### 🔹 Expandable Cards Section
+- Cards arranged in a **single horizontal row**
+- One card is expanded by default
+- On hover:
+  - Hovered card expands horizontally
+  - Other cards collapse
+- Glassmorphism overlay on images
+- Title and description appear on bottom-left
+
+---
+
+### 🔹 CTA / Interactive Sections
+- User engagement focused design
+- Hover effects and transitions
+- Clean, minimal UI
+
+---
+
+## 📦 Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/soumyadeepmukherji/web-spiders-frontend
+
+2. Live Link
+https://web-spiders-frontend.vercel.app/
